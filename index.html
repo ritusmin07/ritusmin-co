@@ -7,155 +7,241 @@
 <title>RITUSMIN.CO — Premium Store</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-background:#080808;
-color:#f5ead7;
-font-family:Arial,sans-serif;
+  margin:0;
+  background:#080808;
+  color:#f5ead7;
+  font-family:Arial,sans-serif;
 }
 
 header{
-position:sticky;
-top:0;
-z-index:10;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 6%;
-background:rgba(8,8,8,.95);
-border-bottom:1px solid #29231a;
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 6%;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid #29231a;
 }
 
 .logo{
-font-family:Georgia,serif;
-font-size:24px;
-letter-spacing:4px;
+  font-family:Georgia,serif;
+  font-size:24px;
+  letter-spacing:4px;
 }
 
 .cart{
-background:#c9a45c;
-color:#080808;
-border:0;
-padding:10px 16px;
-font-weight:bold;
-border-radius:4px;
+  background:#c9a45c;
+  color:#080808;
+  border:0;
+  padding:10px 16px;
+  font-weight:bold;
+  border-radius:5px;
+  cursor:pointer;
 }
 
 .hero{
-min-height:65vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:60px 20px;
-background:radial-gradient(circle,#332819 0,#080808 55%);
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  background:
+  radial-gradient(circle at center,#332819 0,#080808 58%);
 }
 
 .hero h1{
-font-family:Georgia,serif;
-font-size:clamp(45px,10vw,85px);
-letter-spacing:6px;
-margin:0;
+  font-family:Georgia,serif;
+  font-size:clamp(45px,10vw,85px);
+  letter-spacing:6px;
+  margin:0;
 }
 
 .hero p{
-color:#c8bda9;
-letter-spacing:3px;
-margin:20px 0 30px;
+  color:#c8bda9;
+  letter-spacing:3px;
+  margin:20px 0 30px;
 }
 
 .btn{
-display:inline-block;
-padding:14px 28px;
-background:#c9a45c;
-color:#080808;
-text-decoration:none;
-font-weight:bold;
-border-radius:3px;
+  display:inline-block;
+  padding:14px 28px;
+  background:#c9a45c;
+  color:#080808;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:4px;
 }
 
 .section{
-padding:60px 6%;
-text-align:center;
+  padding:65px 6%;
+  text-align:center;
 }
 
 .section h2{
-font-family:Georgia,serif;
-font-size:34px;
+  font-family:Georgia,serif;
+  font-size:34px;
 }
 
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
-max-width:1100px;
-margin:35px auto;
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(230px,1fr));
+  gap:22px;
+  max-width:1100px;
+  margin:35px auto;
 }
 
 .product{
-background:#111;
-border:1px solid #2d281f;
-border-radius:8px;
-overflow:hidden;
-text-align:left;
+  background:#111;
+  border:1px solid #2d281f;
+  border-radius:10px;
+  overflow:hidden;
+  text-align:left;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  border-color:#c9a45c;
 }
 
 .product-img{
-height:210px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#191919;
-font-size:55px;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#191919;
+  font-size:70px;
 }
 
 .product-info{
-padding:20px;
+  padding:20px;
 }
 
 .product h3{
-font-family:Georgia,serif;
-margin:0 0 8px;
+  font-family:Georgia,serif;
+  margin:0 0 8px;
+  font-size:20px;
 }
 
 .product p{
-color:#999;
-font-size:14px;
+  color:#999;
+  font-size:14px;
+  line-height:1.5;
 }
 
 .price{
-font-size:20px;
-font-weight:bold;
-color:#d5b36d;
-margin:15px 0;
+  font-size:21px;
+  font-weight:bold;
+  color:#d5b36d;
+  margin:15px 0;
+}
+
+.old-price{
+  color:#666;
+  text-decoration:line-through;
+  font-size:14px;
+  margin-left:6px;
 }
 
 .buy{
-width:100%;
-padding:12px;
-border:0;
-background:#c9a45c;
-color:#080808;
-font-weight:bold;
-border-radius:4px;
+  width:100%;
+  padding:12px;
+  border:0;
+  background:#c9a45c;
+  color:#080808;
+  font-weight:bold;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.buy:hover{
+  background:#e0bd75;
+}
+
+.badge{
+  display:inline-block;
+  background:#2d2518;
+  color:#d5b36d;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:11px;
+  margin-bottom:10px;
 }
 
 .about{
-max-width:700px;
-margin:auto;
-color:#aaa;
-line-height:1.8;
+  max-width:700px;
+  margin:auto;
+  color:#aaa;
+  line-height:1.8;
 }
 
 footer{
-padding:30px;
-text-align:center;
-border-top:1px solid #29231a;
-color:#777;
-font-size:12px;
-letter-spacing:2px;
+  padding:35px 20px;
+  text-align:center;
+  border-top:1px solid #29231a;
+  color:#777;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.cart-box{
+  display:none;
+  position:fixed;
+  right:20px;
+  top:75px;
+  width:300px;
+  max-width:90%;
+  background:#151515;
+  border:1px solid #c9a45c;
+  border-radius:8px;
+  padding:20px;
+  z-index:200;
+  box-shadow:0 10px 40px #000;
+}
+
+.cart-box h3{
+  margin-top:0;
+  font-family:Georgia,serif;
+}
+
+.cart-item{
+  border-bottom:1px solid #292929;
+  padding:10px 0;
+  font-size:14px;
+}
+
+.checkout{
+  width:100%;
+  margin-top:15px;
+  padding:12px;
+  border:0;
+  background:#25D366;
+  color:white;
+  font-weight:bold;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.close{
+  float:right;
+  background:none;
+  color:white;
+  border:0;
+  font-size:20px;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -163,24 +249,34 @@ letter-spacing:2px;
 <body>
 
 <header>
-<div class="logo">RITUSMIN.CO</div>
+
+<div class="logo">
+RITUSMIN.CO
+</div>
 
 <button class="cart" onclick="showCart()">
 🛒 Cart (<span id="cartCount">0</span>)
 </button>
+
 </header>
+
 
 <section class="hero">
 
 <div>
+
 <h1>RITUSMIN.CO</h1>
 
 <p>MORE THAN JUST PRODUCTS</p>
 
-<a class="btn" href="#shop">SHOP NOW</a>
+<a class="btn" href="#shop">
+SHOP NOW
+</a>
+
 </div>
 
 </section>
+
 
 <section class="section" id="shop">
 
@@ -188,53 +284,152 @@ letter-spacing:2px;
 
 <div class="products">
 
+
+<!-- PRODUCT 1 -->
+
 <div class="product">
-<div class="product-img">🚗</div>
+
+<div class="product-img">
+💡
+</div>
 
 <div class="product-info">
-<h3>USB light</h3>
-<p>Modern everyday smartwatch.</p>
 
-<div class="price">₹650</div>
+<span class="badge">
+BEST SELLER
+</span>
+
+<h3>
+Motion Sensor LED Night Light
+</h3>
+
+<p>
+Automatic motion-sensor light for
+bedrooms, stairs, wardrobes and
+hallways.
+</p>
+
+<div class="price">
+₹499
+<span class="old-price">₹899</span>
+</div>
+
+<button class="buy"
+onclick="addToCart('Motion Sensor LED Night Light',499)">
+ADD TO CART
+</button>
+
+</div>
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product">
+
+<div class="product-img">
+⌚
+</div>
+
+<div class="product-info">
+
+<span class="badge">
+TRENDING
+</span>
+
+<h3>
+Smart Watch
+</h3>
+
+<p>
+Modern smartwatch for everyday
+fitness and notifications.
+</p>
+
+<div class="price">
+₹999
+<span class="old-price">₹1,499</span>
+</div>
 
 <button class="buy"
 onclick="addToCart('Smart Watch',999)">
 ADD TO CART
 </button>
+
 </div>
 </div>
 
+
+<!-- PRODUCT 3 -->
 
 <div class="product">
-<div class="product-img">🎧</div>
+
+<div class="product-img">
+🎧
+</div>
 
 <div class="product-info">
-<h3>Wireless Earbuds</h3>
-<p>Compact premium wireless earbuds.</p>
 
-<div class="price">₹799</div>
+<span class="badge">
+POPULAR
+</span>
+
+<h3>
+Wireless Earbuds
+</h3>
+
+<p>
+Compact wireless earbuds with
+a clean modern design.
+</p>
+
+<div class="price">
+₹799
+<span class="old-price">₹1,299</span>
+</div>
 
 <button class="buy"
 onclick="addToCart('Wireless Earbuds',799)">
 ADD TO CART
 </button>
+
 </div>
 </div>
 
+
+<!-- PRODUCT 4 -->
 
 <div class="product">
-<div class="product-img">💡</div>
+
+<div class="product-img">
+🚗
+</div>
 
 <div class="product-info">
-<h3>Smart LED Light</h3>
-<p>Stylish lighting for your room.</p>
 
-<div class="price">₹499</div>
+<span class="badge">
+NEW
+</span>
+
+<h3>
+Magnetic Car Phone Holder
+</h3>
+
+<p>
+Simple magnetic phone holder
+for your car dashboard.
+</p>
+
+<div class="price">
+₹599
+<span class="old-price">₹999</span>
+</div>
 
 <button class="buy"
-onclick="addToCart('Smart LED Light',499)">
+onclick="addToCart('Magnetic Car Phone Holder',599)">
 ADD TO CART
 </button>
+
 </div>
 </div>
 
@@ -242,26 +437,69 @@ ADD TO CART
 
 </section>
 
+
 <section class="section">
 
-<h2>Why RITUSMIN.CO?</h2>
+<h2>
+Why RITUSMIN.CO?
+</h2>
 
 <p class="about">
-We search for useful, stylish and interesting products
-that make everyday life better — without unnecessary
-complications.
+
+We search for useful, stylish and
+interesting products that can make
+everyday life easier.
+
+RITUSMIN.CO focuses on affordable
+products with a premium shopping
+experience.
+
 </p>
 
 </section>
 
+
+<!-- CART -->
+
+<div class="cart-box" id="cartBox">
+
+<button class="close"
+onclick="closeCart()">
+×
+</button>
+
+<h3>
+Your Cart 🛒
+</h3>
+
+<div id="cartItems">
+Your cart is empty.
+</div>
+
+<div id="cartTotal"
+style="margin-top:15px;font-weight:bold;">
+Total: ₹0
+</div>
+
+<button class="checkout"
+onclick="checkoutWhatsApp()">
+ORDER ON WHATSAPP
+</button>
+
+</div>
+
+
 <footer>
+
 © 2026 RITUSMIN.CO — ALL RIGHTS RESERVED
+
 </footer>
 
 
 <script>
 
-let cart = [];
+let cart=[];
+
 
 function addToCart(name,price){
 
@@ -272,27 +510,102 @@ price:price
 
 document.getElementById("cartCount").innerText=cart.length;
 
-alert(name + " added to cart 🛒");
+alert(name+" added to cart 🛒");
+
 }
+
 
 function showCart(){
 
-if(cart.length === 0){
-alert("Your cart is empty 🛒");
-return;
-}
+let box=document.getElementById("cartBox");
 
-let message="YOUR CART\\n\\n";
+box.style.display="block";
+
+let items=document.getElementById("cartItems");
+
 let total=0;
 
-cart.forEach((item,i)=>{
-message += (i+1)+". "+item.name+" — ₹"+item.price+"\\n";
-total += item.price;
+if(cart.length===0){
+
+items.innerHTML="Your cart is empty.";
+
+document.getElementById("cartTotal").innerText=
+"Total: ₹0";
+
+return;
+
+}
+
+let html="";
+
+cart.forEach(function(item,index){
+
+html+=
+'<div class="cart-item">'+
+(index+1)+". "+
+item.name+
+" — ₹"+
+item.price+
+"</div>";
+
+total+=item.price;
+
 });
 
-message += "\\nTOTAL: ₹"+total;
+items.innerHTML=html;
 
-alert(message);
+document.getElementById("cartTotal").innerText=
+"Total: ₹"+total;
+
+}
+
+
+function closeCart(){
+
+document.getElementById("cartBox").style.display="none";
+
+}
+
+
+function checkoutWhatsApp(){
+
+if(cart.length===0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+let message="Hello RITUSMIN.CO!%0A%0AI want to order:%0A";
+
+let total=0;
+
+cart.forEach(function(item,index){
+
+message+=
+(index+1)+". "+
+item.name+
+" - ₹"+
+item.price+
+"%0A";
+
+total+=item.price;
+
+});
+
+message+=
+"%0ATotal: ₹"+
+total+
+"%0A%0APlease confirm my order.";
+
+let phone="+919707094876";
+
+window.open(
+"https://wa.me/"+phone+"?text="+message,
+"_blank"
+);
+
 }
 
 </script>
