@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RITUSMIN.CO — More Than Just Products</title>
 
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+background:#090909;
+color:#f4ead8;
+font-family:Arial,sans-serif;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 7%;
+border-bottom:1px solid #29231a;
+}
+
+.logo{
+font-family:Georgia,serif;
+font-size:27px;
+letter-spacing:4px;
+}
+
+nav a{
+color:#ddd;
+text-decoration:none;
+margin-left:24px;
+font-size:13px;
+}
+
+.hero{
+min-height:72vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:radial-gradient(circle at center,#2b2418 0,#090909 48%);
+}
+
+.hero h1{
+font-family:Georgia,serif;
+font-size:clamp(45px,9vw,90px);
+letter-spacing:7px;
+margin:0;
+}
+
+.hero p{
+color:#c7bda9;
+letter-spacing:3px;
+margin:20px 0 35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#c9a45c;
+color:#090909;
+text-decoration:none;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.section{
+padding:65px 7%;
+text-align:center;
+}
+
+.section h2{
+font-family:Georgia,serif;
+font-size:34px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.card{
+border:1px solid #2d281f;
+padding:35px 20px;
+background:#111;
+}
+
+.card h3{
+font-family:Georgia,serif;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+}
+
+footer{
+padding:30px;
+text-align:center;
+border-top:1px solid #29231a;
+color:#888;
+font-size:12px;
+letter-spacing:2px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">RITUSMIN.CO</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>RITUSMIN.CO</h1>
+
+<p>MORE THAN JUST PRODUCTS</p>
+
+<a class="btn" href="#shop">
+EXPLORE COLLECTION
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="shop">
+
+<h2>Featured Collection</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Smart Finds</h3>
+<p>Useful products selected for everyday life.</p>
+</div>
+
+<div class="card">
+<h3>Premium Picks</h3>
+<p>Modern products with a premium look and feel.</p>
+</div>
+
+<div class="card">
+<h3>New Arrivals</h3>
+<p>Fresh finds coming soon to RITUSMIN.CO.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>More Than Just Products</h2>
+
+<p style="max-width:650px;margin:auto;color:#aaa;line-height:1.8">
+
+RITUSMIN.CO is a modern lifestyle store focused on useful,
+stylish and interesting products.
+
+</p>
+
+</section>
+
+<footer id="contact">
+
+© 2026 RITUSMIN.CO — ALL RIGHTS RESERVED
+
+</footer>
+
+</body>
+</html>
